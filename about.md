@@ -1,15 +1,18 @@
----
-layout: page
-title: About
-permalink: /about/
----
+//closures
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+function tenPercent(){
+	return function(price){
+		return price + (price * 0.1)
+    }
+}
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+function xPercent(x){
+	return function(price){
+		return price + (price * (x/100))
+    }
+}
+
+var ddv18 = xPercent(18);
+
+ddv18(2000); //returns 2360 
