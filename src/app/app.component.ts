@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Adal4Service } from 'adal-angular4';
+// import { Adal4Service } from 'adal-angular4';
 
 //Adal Configuration
 const config = {
@@ -24,8 +24,8 @@ const config2 = {
 export class AppComponent {
     title = 'Adal Angular 4';
 
-    constructor(private service: Adal4Service) {
-        this.service.init(config);
-    }
+    // constructor(private service: Adal4Service) {
+    //     this.service.init(config);
+    // }
 
 }
